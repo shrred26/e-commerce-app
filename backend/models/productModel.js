@@ -13,7 +13,7 @@ const reviewSchema = mongoose.Schema({
         type: String,
         required: true
     }
-}, { timeStamps: true })
+}, { timestamps: true })
 
 const productSchema = mongoose.Schema({
     User: {
