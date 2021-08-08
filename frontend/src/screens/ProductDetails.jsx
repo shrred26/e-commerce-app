@@ -16,7 +16,7 @@ const ProductDetails = ({ match }) => {
   useEffect(() => {
     const fetchProduct = async () => {
       const data = await fetch(
-        `http://localhost:8080/product/${match.params.id}`
+        `http://localhost:8080/api/product/${match.params.id}`
       ).then((resp) => resp.json());
       setProduct(data);
     };

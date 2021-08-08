@@ -7,8 +7,8 @@ const Homescreen = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const data = await fetch("http://localhost:8080/products").then((resp) =>
-        resp.json()
+      const data = await fetch("http://localhost:8080/api/products").then(
+        (resp) => resp.json()
       );
       setProducts(data);
     };
