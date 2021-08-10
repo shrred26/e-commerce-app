@@ -12,7 +12,7 @@ export const listProducts = () => async (dispatch) => {
     } catch (e) {
         dispatch({
             type: PRODUCT_LIST_FAIL,
-            payload: err.message
+            payload: e.message
         })
     }
 }
