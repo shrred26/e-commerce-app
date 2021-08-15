@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 require("colors");
 const connectDb = require("./config/config");
 const productRoutes = require('./routes/productRoutes');
+const userRoutes = require('./routes/userRoutes');
 const { errorHandler } = require('./middlewares/errorMiddleware');
 
 //dot env config
@@ -16,8 +17,12 @@ const app = express()
 app.use(cors())
 app.options('*', cors());
 
+//middleware body parser
+app.use(express.json());
 app.use('/api', productRoutes);
+app.use('/api/users', userRoutes);
 app.use(errorHandler);
+
 
 app.get('/', (req, res) => {
     res.send('<h1>welcome to node server</h1>')
