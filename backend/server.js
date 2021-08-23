@@ -5,6 +5,7 @@ require("colors");
 const connectDb = require("./config/config");
 const productRoutes = require('./routes/productRoutes');
 const userRoutes = require('./routes/userRoutes');
+const orderRoutes = require('./routes/orderRoute');
 const { errorHandler } = require('./middlewares/errorMiddleware');
 
 //dot env config
@@ -21,6 +22,7 @@ app.options('*', cors());
 app.use(express.json());
 app.use('/api', productRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
 app.use(errorHandler);
 
 
