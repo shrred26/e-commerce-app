@@ -4,7 +4,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { productListReducer, productDetailReducer } from './reducers/productReducer';
 import { cartReducer } from './reducers/cartReducer';
 import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducer';
-import { orderCreateReducer, orderDetailsReducer, orderPayReducer } from './reducers/orderReducer';
+import { orderCreateReducer, orderDetailsReducer, orderListReducer, orderPayReducer } from './reducers/orderReducer';
 
 const shippingAddressFromStorage = localStorage.getItem("shippingAddress") ?
     JSON.parse(localStorage.getItem("shippingAddress")) : {}
@@ -28,7 +28,8 @@ const reducer = combineReducers({
     userUpdateProfile: userUpdateProfileReducer,
     orderCreate: orderCreateReducer,
     orderDetails: orderDetailsReducer,
-    orderPay: orderPayReducer
+    orderPay: orderPayReducer,
+    orderList: orderListReducer
 });
 const initialState = {
     cart: {
