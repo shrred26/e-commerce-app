@@ -12,6 +12,7 @@ import ProfileScreen from './screens/ProfileScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrder from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
 
 function App() {
   return (
@@ -20,14 +21,15 @@ function App() {
       <main className='my-3'>
         <Container>
           <Route path='/' component={Homescreen} exact />
-          <Route path='/product/:id' component={ProductDetails} exact />
-          <Route path='/cart/:id?' component={CartScreen} exact />
-          <Route path='/login' component={LoginScreen} exact />
-          <Route path='/register' component={RegisterScreen} exact />
-          <Route path='/profile' component={ProfileScreen} exact />
-          <Route path='/shipping' component={ShippingScreen} exact />
-          <Route path='/payment' component={PaymentScreen} exact />
-          <Route path='/placeorder' component={PlaceOrder} exact />
+          <Route path='/product/:id' component={ProductDetails} />
+          <Route path='/cart/:id?' component={CartScreen} />
+          <Route path='/login' component={LoginScreen} />
+          <Route path='/register' component={RegisterScreen} />
+          <Route path='/profile' component={ProfileScreen} />
+          <Route path='/shipping' component={ShippingScreen} />
+          <Route path='/payment' component={PaymentScreen} />
+          <Route path='/placeorder' component={PlaceOrder} />
+          <Route path='/order/:id' component={OrderScreen} />
         </Container>
       </main>
       <Footer />
