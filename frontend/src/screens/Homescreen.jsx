@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import ProductScreen from "./ProductScreen";
 import { useDispatch, useSelector } from "react-redux";

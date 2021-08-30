@@ -18,7 +18,7 @@ const PlaceOrder = ({ history }) => {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const orderCreate = useSelector((state) => state.orderCreate);
-  const { loading, success, error, order } = orderCreate;
+  const { success, error, order } = orderCreate;
 
   const addDecimal = (num) => {
     return (Math.round(num * 100) / 100).toFixed(2);
@@ -55,7 +55,7 @@ const PlaceOrder = ({ history }) => {
     if (success) {
       history.push(`/order/${order._id}`);
     }
-  }, [history, success]);
+  }, [history, success, order._id]);
 
   return (
     <>

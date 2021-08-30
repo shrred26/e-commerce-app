@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  Button,
   Row,
   Col,
   ListGroup,
@@ -12,12 +11,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { PayPalButton } from "react-paypal-button-v2";
 import Message from "../components/shared/Message";
-import CheckoutStep from "../components/shared/CheckoutStep";
-import {
-  createOrder,
-  getOrderDetails,
-  payOrder,
-} from "../actions/orderActions";
+import { getOrderDetails, payOrder } from "../actions/orderActions";
 import Loader from "../components/shared/loader";
 import { fetchJSONData } from "../network";
 import { ORDER_PAY_RESET } from "../constants/orderContants";
@@ -28,7 +22,7 @@ const OrderScreen = ({ match }) => {
   const [sdkReady, setSdkReady] = useState(false);
   const orderDetails = useSelector((state) => state.orderDetails);
   const orderPay = useSelector((state) => state.orderPay);
-  const { loading: loadingPay, success: successPay } = orderPay;
+  const { success: successPay } = orderPay;
   const { order, loading, error } = orderDetails;
 
   useEffect(() => {

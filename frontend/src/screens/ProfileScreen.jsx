@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Form, Row, Col, Button, Table } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/shared/Message";
 import Loader from "./../components/shared/loader";
-import FormContainer from "../components/shared/FormContainer";
-import { getUserDetails, register } from "../actions/userActions";
+import { getUserDetails } from "../actions/userActions";
 import { updateUserProfile } from "./../actions/userActions";
 import { listOrders } from "../actions/orderActions";
 import { LinkContainer } from "react-router-bootstrap";
 
-const ProfileScreen = ({ location, history }) => {
+const ProfileScreen = ({ history }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+  const [message] = useState("");
 
   const dispatch = useDispatch();
   const userDetails = useSelector((state) => state.userDetails);
