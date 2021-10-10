@@ -1,7 +1,10 @@
-# E commerce app
+# E-commerce App
 
 Full featured shopping cart, signup, login, product info, user profile with orders, order details, checkout process ,Paypal / credit card integration.
+
 App made using MERN stack.
+
+Tech used: React, Redux, React Router, Bootstrap, Express.Js, Node.Js, MongoDB, JWT.
 
 ### Register page
 
