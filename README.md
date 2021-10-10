@@ -1,6 +1,7 @@
 # E commerce app
 
 Full featured shopping cart, signup, login, product info, user profile with orders, order details, checkout process ,Paypal / credit card integration.
+App made using MERN stack.
 
 ### Register page
 
